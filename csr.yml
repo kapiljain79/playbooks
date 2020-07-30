@@ -1,0 +1,10 @@
+---
+- name: ios banner
+  hosts: switch
+  gather_facts: no
+  tasks:
+   - name: configure the login banner
+    ios_banner:
+        banner: login
+        text: this is a login banner configured via ansible
+        state: absent
